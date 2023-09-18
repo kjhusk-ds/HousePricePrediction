@@ -39,7 +39,14 @@ numerical_features.remove('Id')
 print(f'The Numerical Features Are: {numerical_features}')
 print(f'The number of numerical features is: {len(numerical_features)}')
 #%%
+#Now let's get the categorical features
+categorical_features = [col for col in train.columns if train.dtypes[col] == "object"]
 
+print(f'The Categorical Features Are: {categorical_features}')
+print(f'The number of categorical features is: {len(categorical_features)}')
+'''
+next we'll check for Ordinal features among the numerical data
+'''
 #%%
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
